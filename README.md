@@ -2,7 +2,7 @@
 
 The aim of the exercise is to understand DOM
 * [ ] DOM
-* [ ] DOM Manupulation
+* [ ] DOM Manipulation
 * [ ] Events
 
 ## Getting Started
