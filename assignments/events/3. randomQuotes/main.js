@@ -1,9 +1,18 @@
 var quotes;
-
 // Write your code here
-
-
-
+let h1 = document.createElement("h1");
+let h3 = document.createElement("h3");
+function randomQuotes({keyCode}) {
+    if(keyCode === 32) {
+    let quotes1 = quotes[Math.floor(Math.random()*[quotes.length-1])]
+    // console.log(quotes1);
+    h1.innerText = quotes1.quoteText;
+    h3.innerText = quotes1.quoteAuthor;
+    document.body.append(h1);
+    document.body.append(h3);
+    }
+}
+document.addEventListener("keyup", randomQuotes);
 quotes = [
     {
         "quoteAuthor": "Thomas Edison",
