@@ -39,5 +39,14 @@
     const p = document.getElementsByTagName("p")[0];
     const ul = document.getElementsByTagName("ul")[0];
     // Your code goes here
+    ul.firstElementChild.style.backgroundColor = "teal";
+    let li = document.getElementsByTagName("li");
+    for(let i of li) {
+      i.style.backgroundColor = "yellow";
+    }
+    li[li.length-1].style.backgroundColor = "pink";
+    let liMid = li[li.length-2];
+    liMid.previousElementSibling.style.backgroundColor = "coral";
+    liMid.nextElementSibling.style.backgroundColor = "aquamarine";
   </script>
 </html>

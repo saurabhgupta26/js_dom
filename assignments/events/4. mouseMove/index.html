@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mouse Move</title>
+    </head>
+    <body>
+        <style>
+            div {
+                width: 700px;
+                height: 800px;
+                border: 8px solid rgb(77, 180, 36);
+            }
+            li {
+                list-style-type: none;
+                font-size: 30px;
+            }
+            h1 {
+                margin: 30px;
+                font-size: 50px;
+            }
+        </style>
+        <div class="mouseSpace">
+            <h1>
+                Move Mouse Cursor
+            </h1>
+            <ul>
+                <li class="screenX">0
+                </li>
+                <li class="screenY">0
+                </li>
+                <li class="clientX">0
+                </li>
+                <li class="clientY">0
+                </li>
+            </ul>
+        </div>
+        <script>
+            let mouseSpace = document.querySelector(".mouseSpace")
+            function mouseMovement(value) {
+                let x1 = document.querySelector(".screenX");
+                x1.textContent = event.screenX;
+                let y1 = document.querySelector(".screenY");
+                y1.textContent = event.screenY;
+                let x2 = document.querySelector(".clientX");
+                x2.textContent = event.clientX;
+                let y2 = document.querySelector(".clientY");
+                y2.textContent = event.clientY;
+            }        
+            mouseSpace.addEventListener("mousemove", mouseMovement)
+        </script>
+    </body>
+</html>
